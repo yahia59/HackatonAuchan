@@ -1,11 +1,11 @@
 import { ConsoPage } from './conso/conso';
 import { SportPage } from './sport/sport';
 import { TabsPage } from './tabs/tabs';
-import {LoginPage} from "./login/login";
 import {MenusPage} from "./menus/menus";
+import {TutorialPage} from "./tutorial/tutorial";
 
 // The page the user lands on after opening the app and without a session
-export const FirstRunPage = LoginPage;
+export const FirstRunPage = TutorialPage;
 
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs²
