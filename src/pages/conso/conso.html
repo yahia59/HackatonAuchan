@@ -1,13 +1,27 @@
 <ion-header>
 
   <ion-navbar>
-    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>{{ 'CONSO_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
+  </ion-item>
 
-<span>toto</span>
+  <div>
+    INVENTAIRE
+    <ion-img
+      *ngFor="let item of inventory"
+      src="https://www.auchandrive.fr/drive/static-media/front/pictures/product/zoom/{{item.cug}}.jpg"></ion-img>
+  </div>
+  <div>
+    MIAM
+  </div>
 </ion-content>
