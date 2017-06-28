@@ -5,9 +5,9 @@
   "LOGIN": "Connexion",
   "SIGNUP": "Inscription",
 
-  "TAB1_TITLE": "Items",
-  "TAB2_TITLE": "Recherche",
-  "TAB3_TITLE": "Paramètres",
+  "TAB1_TITLE": "Conso",
+  "TAB2_TITLE": "Sport",
+  "TAB3_TITLE": "Menus",
 
   "MAP_TITLE": "Carte",
 
@@ -44,5 +44,9 @@
 
   "CARDS_TITLE": "Social",
 
-  "SEARCH_TITLE": "Recherche"
+  "SEARCH_TITLE": "Recherche",
+
+  "CONSO_TITLE": "Consommations",
+  "SPORT_TITLE": "Sport",
+  "MENUS_TITLE": "Menus"
 }

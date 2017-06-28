@@ -5,13 +5,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { CardsPage } from '../pages/cards/cards';
-import { ContentPage } from '../pages/content/content';
+import { MenusPage } from '../pages/menus/menus';
 import { FirstRunPage } from '../pages/pages';
-import { ListMasterPage } from '../pages/list-master/list-master';
+import { ConsoPage } from '../pages/conso/conso';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
 import { MenuPage } from '../pages/menu/menu';
-import { SearchPage } from '../pages/search/search';
+import { SportPage } from '../pages/sport/sport';
 import { SettingsPage } from '../pages/settings/settings';
 import { SignupPage } from '../pages/signup/signup';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -51,14 +51,14 @@ export class MyApp {
     { title: 'Welcome', component: WelcomePage },
     { title: 'Tabs', component: TabsPage },
     { title: 'Cards', component: CardsPage },
-    { title: 'Content', component: ContentPage },
+    { title: 'Content', component: MenusPage },
     { title: 'Login', component: LoginPage },
     { title: 'Signup', component: SignupPage },
     { title: 'Map', component: MapPage },
-    { title: 'Master Detail', component: ListMasterPage },
+    { title: 'Consommations', component: ConsoPage },
     { title: 'Menu', component: MenuPage },
     { title: 'Settings', component: SettingsPage },
-    { title: 'Search', component: SearchPage }
+    { title: 'Sport', component: SportPage }
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
