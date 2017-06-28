@@ -11,14 +11,25 @@
 
   "MAP_TITLE": "Carte",
 
-  "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans le kit de démarrage Ionic Super Starter",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Ionic Super Starter</b> est un kit complet pour démarrer sur Ionic. Il repose sur les meilleures pratiques et implémente de nombreux types de pages.",
+  "TUTORIAL_SKIP_BUTTON" : "Passer >",
+  "TUTORIAL_CONTINUE_BUTTON" : "Continuer",
 
-  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser le Super Starter",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "Assemblez les types de pages désirés et supprimez les autres. Le kit inclut plusieurs mises en page courantes d’applications mobiles, comme les pages de connexion et d’inscription, les onglets et cette page de tutoriel.",
+  "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans Auch'Sport",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Auch'Sport</b> TODO",
 
-  "TUTORIAL_SLIDE3_TITLE": "Pour commencer",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "Si vous avez besoin d’aide, consultez le README du Super Starter pour un tutoriel complet.",
+  "TUTORIAL_SLIDE2_TITLE": "Comment utiliser Auch'Sport ?",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "TODO",
+
+  "TUTORIAL_SLIDE3_TITLE": "Le compteur de calories",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "TODO",
+
+  "TUTORIAL_SLIDE4_TITLE": "Les conseils sportif",
+  "TUTORIAL_SLIDE4_DESCRIPTION": "TODO",
+
+  "TUTORIAL_SLIDE5_TITLE": "Les repas auchan",
+  "TUTORIAL_SLIDE5_DESCRIPTION": "TODO",
+
+  "TUTORIAL_SLIDE_END_TITLE": "Let's get started !",
 
   "SETTINGS_TITLE": "Paramètres",
   "SETTINGS_OPTION1": "Option 1",
