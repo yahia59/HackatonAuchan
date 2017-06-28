@@ -6,33 +6,93 @@
 
 </ion-header>
 
-
 <ion-content>
   <form (submit)="doSignup()">
     <ion-list>
-
+      <ion-item>
+        <ion-avatar item-start>
+          <img style="width: 80px; height: 80px;" src="/assets/img/marty-avatar.png">
+        </ion-avatar>
+      </ion-item>
       <ion-item>
         <ion-label fixed>{{ 'NAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.name" name="name"></ion-input>
       </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'FIRSTNAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Poids (kg)</ion-label>
+        <ion-input type="number" [(ngModel)]="account.weight" name="weight"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>Taille (cm)</ion-label>
+        <ion-input type="number" [(ngModel)]="account.size" name="size"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Genre</ion-label>
+        <ion-select [(ngModel)]="account.gender" name="genre" (ngModelChange)="selectCategory($event)">
+          <ion-option [selected]="account.gender == 'm'" value="m">Homme</ion-option>
+          <ion-option [selected]="account.gender == 'f'" value="f">Femme</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sports Favoris</ion-label>
+        <ion-select [(ngModel)]="sendSport" multiple="true" name="sport" okText="Valider" cancelText="Annuler">>
+          <ion-option *ngFor="let item of sports">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+
+      <ion-list  radio-group [(ngModel)]="sendTypeLife" name="typeLife">
+        <ion-list-header>
+          Mon style de vie
+        </ion-list-header>
+        <ion-item [hidden]="account.gender == 'f'" *ngFor="let type of typeMenLife">
+          <ion-label>{{type.name}} : {{type.calorie}}</ion-label>
+          <ion-radio> </ion-radio>
+        </ion-item>
+        <ion-item [hidden]="account.gender == 'm'" *ngFor="let type of typeWomenLife">
+          <ion-label>{{type.name}} : {{type.calorie}}</ion-label>
+          <ion-radio> </ion-radio>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list  radio-group [(ngModel)]="sendGoal" name="goal">
+        <ion-list-header>
+          Mon Objectif
+        </ion-list-header>
+        <ion-item *ngFor="let goal of goals" >
+          <ion-label>{{goal}}</ion-label>
+          <ion-radio> </ion-radio>
+        </ion-item>
+      </ion-list>
+
+    <ion-list>
 
       <ion-item>
         <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
-      <!--
-      Want to add a Username? Here you go:
-
-      <ion-item>
-        <ion-label floating>Username</ion-label>
-        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
-      </ion-item>
-      -->
-
       <ion-item>
         <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Je veux recevoir des infos par mail de la part d'Auch'Sport</ion-label>
+        <ion-checkbox [(ngModel)]="newsletters" name="newsletters"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>J'accepte les conditions d'utilisation</ion-label>
+        <ion-checkbox [(ngModel)]="useTerm" name="useterm"></ion-checkbox>
       </ion-item>
 
       <div padding>
