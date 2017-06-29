@@ -49,9 +49,8 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'Profil', component: ProfilPage },
-    { title: 'Consommations', component: ConsoPage },
-    { title: 'Sport', component: SportPage },
-    { title: 'Content', component: MenusPage },
+    { title: 'Board', component: TabsPage  },
+
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
