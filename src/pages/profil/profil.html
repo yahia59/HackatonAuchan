@@ -1,7 +1,8 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title>Mon Profil</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,13 +23,11 @@
         <ion-label fixed>{{ 'FIRSTNAME' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
       </ion-item>
-
       <ion-item>
         <ion-label fixed>N° Wahoo</ion-label>
         <ion-input type="text" [(ngModel)]="account.wahoo" name="wahoo"></ion-input>
       </ion-item>
-
-        <ion-item>
+      <ion-item>
         <ion-label fixed>Poids (kg)</ion-label>
         <ion-input type="number" [(ngModel)]="account.weight" name="weight"></ion-input>
       </ion-item>
@@ -96,13 +95,8 @@
         <ion-checkbox [(ngModel)]="newsletters" name="newsletters"></ion-checkbox>
       </ion-item>
 
-      <ion-item>
-        <ion-label>J'accepte les conditions d'utilisation</ion-label>
-        <ion-checkbox [(ngModel)]="useTerm" name="useterm"></ion-checkbox>
-      </ion-item>
-
       <div padding>
-        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+        <button ion-button color="primary" block>Valider</button>
       </div>
 
     </ion-list>

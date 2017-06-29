@@ -10,39 +10,47 @@ export class SportsService {
   getSportList() {
     return  [
       {
-        name:'Course à pied',
-        calorie:1000,
-        temps:'1 h'
+        name:'Footing',
+        calorie:500,
+        baseCalorie:500,
+        times:30,
+
       },
       {
         name:'Natation',
         calorie:500,
-        temps:'1 h'
+        baseCalorie:500,
+        times:30
       },
       {
         name:'Marche',
         calorie:300,
-        temps:'1 h'
+        baseCalorie:300,
+        times:30
       },
       {
         name:'Foot',
-        calorie:900,
-        temps:'1 h'
+        calorie:450,
+        baseCalorie:450,
+        times:30
       },
       {
         name:'Tennis',
-        calorie:800,
-        temps:'1 h'
+        calorie:400,
+        basCalorie:400,
+        times:30
       },
       {
         name:'Cross Fit',
-        calorie:1000,
-        temps:'1 h'
+        calorie:500,
+        baseCalorie:500,
+        times:'1h'
       },
       {
         name:'Ping Pong',
-        calorie:900,
-        temps:'1 h'
+        calorie:450,
+        baseCalorie:450,
+        times:30
       }]
   }
 

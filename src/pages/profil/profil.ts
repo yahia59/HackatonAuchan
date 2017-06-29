@@ -9,17 +9,17 @@ import { SportsService } from '../../services/sports.service';
 
 
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html'
+  selector: 'page-profil',
+  templateUrl: 'profil.html'
 })
-export class SignupPage implements OnInit {
+export class ProfilPage implements OnInit {
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
   account: {name: string, firstname: string, wahoo: string, weight:number, size:number, gender:string, email: string, password: string } = {
     name: 'Morge',
     firstname: 'Eric',
-    wahoo:'12684590',
+    wahoo: '12684590',
     weight: 90,
     size: 173,
     gender: 'f',
@@ -95,8 +95,8 @@ export class SignupPage implements OnInit {
     this.goals = ['Perte de Poids', 'Maintien', 'Prise de Poids'];
   }
 
-  ngOnInit(){
-  }
+    ngOnInit(){
+    }
 
 
   doSignup() {

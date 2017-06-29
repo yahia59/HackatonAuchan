@@ -21,6 +21,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { Settings } from '../providers/providers';
 
 import { TranslateService } from '@ngx-translate/core'
+import { ProfilPage } from '../pages/profil/profil';
 
 @Component({
   template: `<ion-menu [content]="content">
@@ -47,18 +48,10 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Tutorial', component: TutorialPage },
-    { title: 'Welcome', component: WelcomePage },
-    { title: 'Tabs', component: TabsPage },
-    { title: 'Cards', component: CardsPage },
-    { title: 'Content', component: MenusPage },
-    { title: 'Login', component: LoginPage },
-    { title: 'Signup', component: SignupPage },
-    { title: 'Map', component: MapPage },
+    { title: 'Profil', component: ProfilPage },
     { title: 'Consommations', component: ConsoPage },
-    { title: 'Menu', component: MenuPage },
-    { title: 'Settings', component: SettingsPage },
-    { title: 'Sport', component: SportPage }
+    { title: 'Sport', component: SportPage },
+    { title: 'Content', component: MenusPage },
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
@@ -93,5 +86,21 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  ngOnInit() {
+    if (localStorage.getItem("TotalKCal") === null) {
+      localStorage.setItem('TotalKCal', '294800');
+      localStorage.setItem('TotalKCalStart', '14-02-2017');
+      localStorage.setItem('TotalKCalWeek', '15400');
+      localStorage.setItem('TotalKCalWeekStart', '22-06-2017');
+      localStorage.setItem('TotalKCalDay', '0');
+      localStorage.setItem('TotalKCalDayStart', '29-06-2017');
+      localStorage.setItem('TotalKCalLoose', '274800');
+      localStorage.setItem('TotalKCalWeekLoose', '16400');
+      localStorage.setItem('TotalKCalDayLoose', '2200');
+    }
+    console.log(localStorage.getItem("TotalKCal"))
+
   }
 }
