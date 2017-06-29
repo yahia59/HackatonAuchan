@@ -1,3 +1,37 @@
-page-conso {
-
+.page-conso{
+  &__inventory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    &__item {
+      width: 75px;
+      margin: 7px;
+      position: relative;
+      &__count {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        border-radius: 50%;
+        background-color: turquoise;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        font-weight: bold;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+      }
+      &__img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+  &__cal {
+    position: fixed;
+    bottom: 60px;
+    right: 3px;
+    z-index: 2;
+  }
 }
