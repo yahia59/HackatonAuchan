@@ -34,19 +34,19 @@ export class ConsoPage {
       {
         cug: '11974',
         name: 'Pizza',
-        cal: '266',
+        cal: '366',
         count: '2'
       },
       {
         cug: '12095',
         name: 'Pizza',
-        cal: '282',
-        count: '1'
+        cal: '782',
+        count: '3'
       },
       {
         cug: '141418',
         name: 'Coca',
-        cal: '38',
+        cal: '68',
         count: '5'
       },
       {
@@ -58,7 +58,7 @@ export class ConsoPage {
       {
         cug: '863632',
         name: 'Taboulé',
-        cal: '160',
+        cal: '260',
         count: '1'
       },
       {

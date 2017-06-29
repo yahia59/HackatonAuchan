@@ -51,7 +51,7 @@ export class SportsService {
       {
         name:'Tennis',
         calorie:400,
-        basCalorie:400,
+        baseCalorie:400,
         times:30
       },
       {
