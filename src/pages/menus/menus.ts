@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
 
 @Component({
   selector: 'page-content',
@@ -8,6 +9,14 @@ import { NavController } from 'ionic-angular';
 })
 export class MenusPage {
 
-  constructor(public navCtrl: NavController) { }
+  checktoggle:boolean;
 
+
+
+  constructor(public navCtrl: NavController, navParams: NavParams, public toastCtrl: ToastController) {
+    this.checktoggle=false;
+  }
+  presentToast() {
+    this.checktoggle= !this.checktoggle;
+  }
 }
