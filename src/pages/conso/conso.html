@@ -9,13 +9,13 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content class="page-conso">
   <ion-item>
     <ion-label>Date</ion-label>
     <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
   </ion-item>
 
-  <h3>Mon inventaire</h3>
+  <h1>Mon inventaire</h1>
   <div class="page-conso__inventory">
     <div class="page-conso__inventory__item" *ngFor="let item of inventory; let i = index" (click)="eatItem(i)">
       <div class="page-conso__inventory__item__count">{{item.count}}</div>
@@ -25,7 +25,7 @@
     </div>
   </div>
 
-  <h3>Ce que j'ai mangé</h3>
+  <h1>Ce que j'ai mangé</h1>
   <div class="page-conso__inventory">
     <div class="page-conso__inventory__item" *ngFor="let item of itemsEat" >
       <img class="page-conso__inventory__item__img" src="https://www.auchandrive.fr/drive/static-media/front/pictures/product/zoom/{{item.cug}}.jpg">
@@ -35,6 +35,6 @@
   </div>
 
   <div class="page-conso__cal">
-    Calories cumulées : {{TotalKCalDay}}
+    {{TotalKCalDay}} KCal
   </div>
 </ion-content>
