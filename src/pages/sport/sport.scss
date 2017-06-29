@@ -38,6 +38,15 @@ h1 {
       margin:0 8px;
       font-size: 25px;
     }
+    & .burned {
+      color: #c70e06;
+      font-weight: bold;
+      margin:0 8px;
+      font-size: 25px;
+    }
+    & .good {
+      color: green !important;
+    }
   }
 }
 
@@ -117,3 +126,4 @@ h1 {
   background: url('../assets/img/run.jpg') no-repeat transparent;
 
 }
+

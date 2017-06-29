@@ -21,7 +21,6 @@ export class ConsoPage {
     this._totalKCalDay.$totalKCalDay.subscribe(value => this.TotalKCalDay = value);
 
     this.date = new Date().toISOString();
-    console.log(this.date)
     this.inventory = [
       {
         cug: '80659',
@@ -70,7 +69,6 @@ export class ConsoPage {
   }
 
   eatItem(index){
-    console.log(index);
     this.itemsEat.push(this.inventory[index]);
     this.inventory[index].count--;
     this.TotalKCalDay += parseInt(this.inventory[index].cal);

@@ -20,6 +20,8 @@ export class SportPage implements OnInit {
   TotalKCalStart:string;
   TotalKCalDayStart:string;
 
+
+
   customAdd:number;
 
   sports:any;

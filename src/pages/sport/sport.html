@@ -18,7 +18,7 @@
           <h2>Mes calories du jour</h2>
           <div class="count-kl__items">
             <span>Calories cumulées :<span class="value">{{TotalKCalDay}}</span> KCal</span>
-            <span>Calories brulées :<span class="value">{{TotalKCalDayLoose}}</span> KCal</span>
+            <span>Calories brulées :<span class="burned" [class.good]="TotalKCalDayLoose > TotalKCalDay">{{TotalKCalDayLoose}}</span> KCal</span>
           </div>
         </div>
 
@@ -31,7 +31,7 @@
           <div class="count-kl__items">
             <span>Depuis le : <span class="date">{{TotalKCalWeekStart}}</span> </span>
             <span>Calories cumulées :<span class="value">{{TotalKCalWeek}}</span> KCal</span>
-            <span>Calories brulées : <span class="value">{{TotalKCalWeekLoose}}</span> KCal</span>
+            <span>Calories brulées : <span class="burned" [class.good]="TotalKCalWeekLoose > TotalKCalWeek">{{TotalKCalWeekLoose}}</span> KCal</span>
           </div>
         </div>
 
@@ -43,7 +43,7 @@
           <div class="count-kl__items">
             <span>Depuis le : <span class="date">{{TotalKCalStart}}</span></span>
             <span>Calories cumulées :<span class="value">{{TotalKCal}}</span> KCal</span>
-            <span>Calories brulées : <span class="value">{{TotalKCalLoose}}</span> KCal</span>
+            <span>Calories brulées : <span class="burned" [class.good]="TotalKCalLoose > TotalKCal">{{TotalKCalLoose}}</span> KCal</span>
           </div>
         </div>
       </ion-slide>
