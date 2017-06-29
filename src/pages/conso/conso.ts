@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { SportsService } from '../../services/sports.service'
+import {NavController} from 'ionic-angular';
+import {SportsService} from '../../services/sports.service'
 
 @Component({
   selector: 'page-conso',
@@ -11,14 +11,17 @@ export class ConsoPage {
   date: String;
   inventory: any[];
   itemsEat: any[];
+  menus: any[];
   TotalKCalDay: number;
+  selected: string;
 
 
-  constructor(public navCtrl: NavController, private _totalKCalDay:SportsService ) {
+  constructor(public navCtrl: NavController, private _totalKCalDay: SportsService) {
   }
 
   ngOnInit() {
     this._totalKCalDay.$totalKCalDay.subscribe(value => this.TotalKCalDay = value);
+    this.selected = 'portions';
 
     this.date = new Date().toISOString();
     this.inventory = [
@@ -63,18 +66,80 @@ export class ConsoPage {
         name: 'Tarte aux pommes',
         cal: '237',
         count: '8'
+      },
+      {
+        cug: '119299',
+        name: 'Roquefort',
+        cal: '361',
+        count: '3'
+      },
+      {
+        cug: '305410',
+        name: 'Betteraves',
+        cal: '146',
+        count: '2'
+      },
+      {
+        cug: '566484',
+        name: 'Fines herbes',
+        cal: '0',
+        count: '50'
       }
-    ]
-    this.itemsEat = []
+    ];
+    this.menus = [
+      {
+        name: 'Cannellonis de Betteraves',
+        img: 'cannellonisbetterave.jpg',
+        cal: '507',
+        ingredients: [
+          {
+            cug: '119299',
+            name: 'Roquefort',
+            cal: '361',
+            count: '3'
+          },
+          {
+            cug: '305410',
+            name: 'Betteraves',
+            cal: '146',
+            count: '2'
+          },
+          {
+            cug: '566484',
+            name: 'Fines herbes',
+            cal: '0',
+            count: '3'
+          }
+        ]
+      },
+      {
+        name: 'Toast Oeuf/Avocat',
+        img: 'oeufavocat.png',
+        cal: '648',
+        ingredients: []
+      }
+    ];
+    this.itemsEat = [];
   }
 
-  eatItem(index){
+  eatItem(index) {
     this.itemsEat.push(this.inventory[index]);
     this.inventory[index].count--;
     this.TotalKCalDay += parseInt(this.inventory[index].cal);
     if (!this.inventory[index].count) {
       this.inventory.splice(index, 1);
     }
+    this._totalKCalDay.setTotalKCalDay(this.TotalKCalDay);
+  }
+
+  eatMenu(index) {
+    for (let item in this.menus[index].ingredients) {
+      this.itemsEat.push(this.menus[index].ingredients[item]);
+      console.log(this.menus[index].ingredients[item]);
+    }
+    console.log(this.itemsEat)
+    this.TotalKCalDay += parseInt(this.menus[index].cal);
+
     this._totalKCalDay.setTotalKCalDay(this.TotalKCalDay);
   }
 

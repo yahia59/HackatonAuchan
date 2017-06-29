@@ -16,19 +16,19 @@
   "TUTORIAL_CONTINUE_BUTTON" : "Continuer",
 
   "TUTORIAL_SLIDE1_TITLE": "Bienvenue dans Auch'Sport",
-  "TUTORIAL_SLIDE1_DESCRIPTION": "<b>Auch'Sport</b> TODO",
+  "TUTORIAL_SLIDE1_DESCRIPTION": "",
 
   "TUTORIAL_SLIDE2_TITLE": "Comment utiliser Auch'Sport ?",
-  "TUTORIAL_SLIDE2_DESCRIPTION": "TODO",
+  "TUTORIAL_SLIDE2_DESCRIPTION": "Simple comme bonjour",
 
   "TUTORIAL_SLIDE3_TITLE": "Le compteur de calories",
-  "TUTORIAL_SLIDE3_DESCRIPTION": "TODO",
+  "TUTORIAL_SLIDE3_DESCRIPTION": "Mangez, bougez, comptez !",
 
   "TUTORIAL_SLIDE4_TITLE": "Les conseils sportif",
-  "TUTORIAL_SLIDE4_DESCRIPTION": "TODO",
+  "TUTORIAL_SLIDE4_DESCRIPTION": "L'effort dans le confort",
 
   "TUTORIAL_SLIDE5_TITLE": "Les repas auchan",
-  "TUTORIAL_SLIDE5_DESCRIPTION": "TODO",
+  "TUTORIAL_SLIDE5_DESCRIPTION": "Auchan vous conseille",
 
   "TUTORIAL_SLIDE_END_TITLE": "Let's get started !",
 
