@@ -1,12 +1,20 @@
+.welcome {
+  background: url('../assets/img/back.jpg') no-repeat transparent;
+
+}
+
 page-welcome {
   .splash-bg {
     position: relative;
     background: url('../assets/img/auchsportlogo.png') no-repeat transparent;
-    background-size: cover;
+   // background-size: cover;
+    background-size: contain;
+    //background-position: center ;
+    background-position-y: 8px;
     height: 45%;
     z-index: 1;
-    background-repeat: repeat-x;
-    animation: animatedBackground 5s linear infinite;
+   // background-repeat: repeat-x;
+   // animation: animatedBackground 5s linear infinite;
   }
 
   @keyframes animatedBackground {
@@ -22,12 +30,14 @@ page-welcome {
   }
   .splash-logo {
     margin: auto;
-    background: url('../assets/img/appicon.png') repeat transparent;
+
+  //  background: url('../assets/img/appicon.png') repeat transparent;
     background-size: 100%;
     width: 128px;
     height: 128px;
   }
   .splash-intro {
+    padding-top: 50px;
     font-size: 18px;
     font-weight: bold;
     max-width: 80%;

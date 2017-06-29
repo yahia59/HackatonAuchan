@@ -6,7 +6,7 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content class="sign--up">
   <form (submit)="doSignup()">
     <ion-list>
       <ion-item>
@@ -53,7 +53,7 @@
 
 
       <ion-list  radio-group [(ngModel)]="sendTypeLife" name="typeLife">
-        <ion-list-header>
+        <ion-list-header class="form-title">
           Mon style de vie
         </ion-list-header>
         <ion-item [hidden]="account.gender == 'f'" *ngFor="let type of typeMenLife">
@@ -68,7 +68,7 @@
 
 
       <ion-list  radio-group [(ngModel)]="sendGoal" name="goal">
-        <ion-list-header>
+        <ion-list-header class="form-title">
           Mon Objectif
         </ion-list-header>
         <ion-item *ngFor="let goal of goals" >

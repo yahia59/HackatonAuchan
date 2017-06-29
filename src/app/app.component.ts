@@ -94,7 +94,7 @@ export class MyApp {
       localStorage.setItem('TotalKCalStart', '14-02-2017');
       localStorage.setItem('TotalKCalWeek', '15400');
       localStorage.setItem('TotalKCalWeekStart', '22-06-2017');
-      localStorage.setItem('TotalKCalDay', '0');
+
       localStorage.setItem('TotalKCalDayStart', '29-06-2017');
       localStorage.setItem('TotalKCalLoose', '274800');
       localStorage.setItem('TotalKCalWeekLoose', '16400');

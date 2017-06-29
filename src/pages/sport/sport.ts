@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { SportsService } from '../../services/sports.service';
 
@@ -25,10 +25,12 @@ export class SportPage implements OnInit {
   sports:any;
 
   constructor(public navCtrl: NavController,
-              private _sports: SportsService) { }
+              private _sports: SportsService,
+              private _totalKCalDay: SportsService ) { }
 
   ngOnInit(){
-    this.TotalKCalDay = parseInt(localStorage.getItem('TotalKCalDay'));
+    this._totalKCalDay.$totalKCalDay.subscribe(value => this.TotalKCalDay = value);
+
     this.TotalKCalWeek = parseInt(localStorage.getItem('TotalKCalWeek'));
     this.TotalKCal = parseInt(localStorage.getItem('TotalKCal'));
     this.TotalKCalLoose = parseInt(localStorage.getItem('TotalKCalLoose'));
@@ -68,12 +70,14 @@ export class SportPage implements OnInit {
   }
 
   logForm(form) {
-    this.TotalKCalLoose = +this.TotalKCalLoose + +this.customAdd;
-    this.TotalKCalWeekLoose = +this.TotalKCalWeekLoose + +this.customAdd;
-    this.TotalKCalDayLoose = +this.TotalKCalDayLoose + +this.customAdd;
+    if(this.customAdd) {
+      this.TotalKCalLoose = +this.TotalKCalLoose + +this.customAdd;
+      this.TotalKCalWeekLoose = +this.TotalKCalWeekLoose + +this.customAdd;
+      this.TotalKCalDayLoose = +this.TotalKCalDayLoose + +this.customAdd;
 
-    localStorage.setItem('TotalKCalLoose', this.TotalKCalLoose.toString());
-    localStorage.setItem('TotalKCalWeekLoose', this.TotalKCalWeekLoose.toString());
+      localStorage.setItem('TotalKCalLoose', this.TotalKCalLoose.toString());
+      localStorage.setItem('TotalKCalWeekLoose', this.TotalKCalWeekLoose.toString());
+    }
 
     form.form.reset();
   }

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SportsService } from '../../services/sports.service'
 
 @Component({
   selector: 'page-conso',
@@ -13,12 +14,11 @@ export class ConsoPage {
   TotalKCalDay: number;
 
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private _totalKCalDay:SportsService ) {
   }
 
   ngOnInit() {
-
-    this.TotalKCalDay = parseInt(localStorage.getItem('TotalKCalDay'));
+    this._totalKCalDay.$totalKCalDay.subscribe(value => this.TotalKCalDay = value);
 
     this.date = new Date().toISOString();
     console.log(this.date)
@@ -77,7 +77,7 @@ export class ConsoPage {
     if (!this.inventory[index].count) {
       this.inventory.splice(index, 1);
     }
-    localStorage.setItem('TotalKCalDay', this.TotalKCalDay.toString());
+    this._totalKCalDay.setTotalKCalDay(this.TotalKCalDay);
   }
 
 }

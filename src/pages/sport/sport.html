@@ -13,7 +13,7 @@
   <div>
     <ion-slides pager>
 
-      <ion-slide style="background-color: #009ed1">
+      <ion-slide class="item1" >
         <div class="count-kl">
           <h2>Mes calories du jour</h2>
           <div class="count-kl__items">
@@ -25,7 +25,7 @@
 
       </ion-slide>
 
-      <ion-slide style="background-color: #32ba69">
+      <ion-slide class="item2">
         <div class="count-kl">
           <h2>Mes calories de la semaine </h2>
           <div class="count-kl__items">
@@ -37,7 +37,7 @@
 
       </ion-slide>
 
-      <ion-slide style="background-color: #eaa700">
+      <ion-slide class="item3" style="background-color: #f87575;">
         <div class="count-kl">
           <h2>Mes calories cumulées</h2>
           <div class="count-kl__items">
@@ -53,7 +53,7 @@
       <form #form="ngForm" (ngSubmit)="logForm(form)">
         <ion-item>
           <ion-label color="primary">Ajout de KCal*</ion-label>
-          <ion-input  [(ngModel)]="customAdd" class="text-align:right" type="number" name="kcal" placeholder="Ajout de KCal*"></ion-input>
+          <ion-input required  [(ngModel)]="customAdd" class="text-align:right" type="number" name="kcal" placeholder="Ajout de KCal*"></ion-input>
         </ion-item>
         <button ion-button type="submit" block>Ajout Manuel ou App. Connecté</button>
       </form>
@@ -80,7 +80,7 @@
         </div>
 
 
-        <ion-icon class="add" name="arrow-dropright-circle" (click)="addKCalLoose(sport.calorie)"></ion-icon>
+        <ion-icon class="add" on name="refresh" (click)="addKCalLoose(sport.calorie)"></ion-icon>
       </div>
     </div>
   </div>
