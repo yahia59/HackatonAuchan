@@ -1,10 +1,24 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 
 export class SportsService {
 
+  $totalKCalDay: Observable<number>;
+  _$totalKCalDay: BehaviorSubject<number> = new BehaviorSubject(0);
+
+  totalKCalDay:number;
+
   constructor() {
+    this.$totalKCalDay = this._$totalKCalDay.asObservable();
+    this.$totalKCalDay.subscribe(value => localStorage.setItem('TotalKCalDay', value.toString()));
+  }
+
+  setTotalKCalDay(value: number) {
+    this._$totalKCalDay.next(value);
   }
 
   getSportList() {
@@ -37,7 +51,7 @@ export class SportsService {
       {
         name:'Tennis',
         calorie:400,
-        basCalorie:400,
+        baseCalorie:400,
         times:30
       },
       {

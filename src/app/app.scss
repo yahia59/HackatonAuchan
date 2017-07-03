@@ -14,3 +14,23 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+.menu-inner {
+  .content {
+    background: white!important;
+  }
+}
+
+.header .toolbar-background {
+
+  background:#64d0dd !important;
+}
+
+.toolbar-title {
+  color: white !important;
+}
+
+.scroll-content .item {
+  background: #ffffff !important;
+}

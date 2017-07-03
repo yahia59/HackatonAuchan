@@ -49,9 +49,8 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'Profil', component: ProfilPage },
-    { title: 'Consommations', component: ConsoPage },
-    { title: 'Sport', component: SportPage },
-    { title: 'Content', component: MenusPage },
+    { title: 'Board', component: TabsPage  },
+
   ]
 
   constructor(private translate: TranslateService, private platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
@@ -94,7 +93,7 @@ export class MyApp {
       localStorage.setItem('TotalKCalStart', '14-02-2017');
       localStorage.setItem('TotalKCalWeek', '15400');
       localStorage.setItem('TotalKCalWeekStart', '22-06-2017');
-      localStorage.setItem('TotalKCalDay', '0');
+
       localStorage.setItem('TotalKCalDayStart', '29-06-2017');
       localStorage.setItem('TotalKCalLoose', '274800');
       localStorage.setItem('TotalKCalWeekLoose', '16400');

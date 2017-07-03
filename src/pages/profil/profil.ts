@@ -22,7 +22,7 @@ export class ProfilPage implements OnInit {
     wahoo: '12684590',
     weight: 90,
     size: 173,
-    gender: 'f',
+    gender: 'm',
     email: 'emorge@auchan.fr',
     password: 'test',
 

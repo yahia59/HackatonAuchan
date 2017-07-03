@@ -1,4 +1,4 @@
-<ion-header>
+npm starr<ion-header>
 
   <ion-navbar>
     <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
@@ -7,9 +7,67 @@
 
 </ion-header>
 
-<ion-content padding>
-  <p>
-    This is a perfect starting point for a page with primarily text content. The
-    body is padded nicely and ready for prose.
-  </p>
+
+<ion-content >
+  <h1>On vous propose</h1>
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/saleceaser.png">
+      </ion-thumbnail>
+      <ion-label>Salade Caesar</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/saladedefruitrouge.png">
+      </ion-thumbnail>
+      <ion-label>Salade de fruits rouge</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/soupepatatedouce.png">
+      </ion-thumbnail>
+      <ion-label>Soupe Patate Douce</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/cerealeauxfruitsrouge.png">
+      </ion-thumbnail>
+      <ion-label>Céréales aux Fruits Rouge</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/saladededinde.png">
+      </ion-thumbnail>
+      <ion-label>Salade de Dinde</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="assets/img/patebolo.png">
+      </ion-thumbnail>
+      <ion-label>Pâtes Bolognaise</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-list radio-group>
+    <ion-item>
+      <ion-label>Auchan Drive</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Auchan Direct</ion-label>
+      <ion-radio></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button (click)="presentToast()" block>Je Commande</button>
+  <div  [hidden]="!checktoggle" class="showAuchan" (click)="presentToast()">
+    <img src="assets/img/AuchanDrive.png">
+  </div>
+
 </ion-content>

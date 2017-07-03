@@ -1,3 +1,26 @@
-page-home {
+page-content {
+  h1 {
+    text-align: center;
+    background: #64d0dd;
+    padding: 1rem;
+    margin: 0;
+    font-weight: normal;
+    color: white;
+  }
 
+}
+
+.showAuchan {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.showAuchan img {
+  height: 100%;
+  width: 100%;
 }

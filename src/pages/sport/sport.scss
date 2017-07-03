@@ -2,8 +2,10 @@ page-sport {
 h1 {
   text-align: center;
   background: #64d0dd;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0;
+  font-weight: normal;
+  color: white;
 }
 }
 
@@ -13,7 +15,7 @@ h1 {
   padding-bottom: 20px;
 
   h2 {
-    color: white;
+    color: #009ed1;
   }
 
   &__items {
@@ -27,14 +29,23 @@ h1 {
     }
 
     & .date {
-      color: white;
+      color: #2e2e2e;
       margin:0 8px;
     }
     & .value {
-      color: white;
+      color: #2e2e2e;
       font-weight: bold;
       margin:0 8px;
       font-size: 25px;
+    }
+    & .burned {
+      color: #c70e06;
+      font-weight: bold;
+      margin:0 8px;
+      font-size: 25px;
+    }
+    & .good {
+      color: green !important;
     }
   }
 }
@@ -99,3 +110,20 @@ h1 {
     }
   }
 }
+
+
+.item1 {
+  background: url('../assets/img/pots.jpg') no-repeat transparent;
+
+}
+
+.item2 {
+  background: url('../assets/img/bienetre.jpg') no-repeat transparent;
+
+}
+
+.item3 {
+  background: url('../assets/img/run.jpg') no-repeat transparent;
+
+}
+

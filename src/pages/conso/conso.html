@@ -9,19 +9,63 @@
 
 </ion-header>
 
-<ion-content>
+<ion-content class="page-conso">
   <ion-item>
     <ion-label>Date</ion-label>
     <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="date"></ion-datetime>
   </ion-item>
 
-  <div>
-    INVENTAIRE
-    <ion-img
-      *ngFor="let item of inventory"
-      src="https://www.auchandrive.fr/drive/static-media/front/pictures/product/zoom/{{item.cug}}.jpg"></ion-img>
+  <h1>Mon frigo</h1>
+  <div padding>
+    <ion-segment [(ngModel)]="selected">
+      <ion-segment-button value="portions">
+        Portions
+      </ion-segment-button>
+      <ion-segment-button value="menus">
+        Recettes
+      </ion-segment-button>
+    </ion-segment>
   </div>
-  <div>
-    MIAM
+
+  <div [ngSwitch]="selected">
+    <ion-list *ngSwitchCase="'portions'">
+      <div class="page-conso__inventory">
+        <div class="page-conso__inventory__item" *ngFor="let item of inventory; let i = index" (click)="eatItem(i)">
+          <div class="page-conso__inventory__item__count">{{item.count}}</div>
+          <img class="page-conso__inventory__item__img"
+               src="https://www.auchandrive.fr/drive/static-media/front/pictures/product/zoom/{{item.cug}}.jpg">
+          <div>{{item.name}}</div>
+          <div>{{item.cal}} KCal</div>
+        </div>
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'menus'">
+      <div class="page-conso__inventory">
+        <div class="page-conso__inventory__menu" *ngFor="let item of menus; let i = index" (click)="eatMenu(i)">
+          <img class="page-conso__inventory__menu__img"
+               src="../../assets/img/{{item.img}}">
+          <div>{{item.name}}</div>
+          <div>{{item.cal}} KCal</div>
+        </div>
+      </div>
+    </ion-list>
+  </div>
+
+
+
+
+  <h1>Ce que j'ai mangé</h1>
+  <div class="page-conso__inventory">
+    <div class="page-conso__inventory__item" *ngFor="let item of itemsEat">
+      <img class="page-conso__inventory__item__img"
+           src="https://www.auchandrive.fr/drive/static-media/front/pictures/product/zoom/{{item.cug}}.jpg">
+      <div>{{item.name}}</div>
+      <div>{{item.cal}} KCal</div>
+    </div>
+  </div>
+
+  <div class="page-conso__cal">
+    {{TotalKCalDay}} KCal
   </div>
 </ion-content>

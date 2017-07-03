@@ -1,3 +1,70 @@
-page-conso {
+.page-conso{
+  h1{
+    text-align: center;
+    background: #64d0dd;
+    padding: 1rem;
+    margin: 0;
+    font-weight: normal;
+    color: white;
+  }
+  &__inventory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 10px;
+    &__item {
+      width: 75px;
+      margin: 7px;
+      position: relative;
+      box-shadow: 0px 1px 5px #888888;
+      &__count {
+        position: absolute;
+        top: -7px;
+        right: -7px;
+        border-radius: 50%;
+        background-color: turquoise;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        font-weight: bold;
+      }
+      div {
+        display: flex;
+        justify-content: center;
+        text-align: center;
 
+      }
+      &__img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+    &__menu {
+      width: 150px;
+      margin: 7px;
+      position: relative;
+      box-shadow: 0px 1px 5px #888888;
+      div {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+      }
+      &__img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+  &__cal {
+    position: fixed;
+    bottom: 60px;
+    right: 3px;
+    z-index: 2;
+    background: #0071BC;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+  }
 }
